@@ -1,4 +1,5 @@
 require "carol/version"
+require "carol/array"
 
 module Carol
   # Your code goes here...
