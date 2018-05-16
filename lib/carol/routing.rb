@@ -1,4 +1,4 @@
-module Rulers
+module Carol
   class Application
     def get_controller_and_action(env)
     _, cont, action, after =
