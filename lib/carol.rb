@@ -1,6 +1,8 @@
 require "carol/version"
 require "carol/array"
 require "carol/routing"
+require "carol/util"
+require "carol/dependencies"
 
 module Carol
   # Your code goes here...
@@ -10,7 +12,7 @@ module Carol
         return [404,
           {'Content-Type' => 'text/html'}, []]
       end
-      
+
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
       text = controller.send(act)
