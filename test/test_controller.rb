@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-class TestController < Rulers::Controller
+class TestController < Carol::Controller
 
   def index
     "Hello!" # Not rendering a view
@@ -8,7 +8,7 @@ class TestController < Rulers::Controller
 
 end
 
-class TestApp < Rulers::Application
+class TestApp < Carol::Application
   def get_controller_and_action(env)
     [TestController, "index"]
   end
