@@ -3,6 +3,7 @@ require "carol/array"
 require "carol/routing"
 require "carol/util"
 require "carol/dependencies"
+require "carol/controller"
 
 module Carol
   # Your code goes here...
@@ -19,17 +20,6 @@ module Carol
       `echo debug > debug.txt`;
       [200, {'Content-Type' => 'text/html'},
       [text]]
-    end
-  end
-
-
-
-  class Controller
-    def initialize(env)
-      @env = env
-    end
-    def env
-      @env
     end
   end
 end
