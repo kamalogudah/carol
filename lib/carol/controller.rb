@@ -1,6 +1,9 @@
 require "erubis"
+require "carol/file_model"
 module Carol
   class Controller
+    include Carol::Model
+    
     def initialize(env)
       @env = env
     end
