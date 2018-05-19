@@ -4,6 +4,7 @@ require "carol/routing"
 require "carol/util"
 require "carol/dependencies"
 require "carol/controller"
+require "carol/file_model"
 
 module Carol
   # Your code goes here...
