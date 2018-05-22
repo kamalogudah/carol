@@ -1,14 +1,21 @@
 require "erubis"
 require "carol/file_model"
+require "rack/request"
 module Carol
   class Controller
     include Carol::Model
-    
     def initialize(env)
       @env = env
     end
     def env
       @env
+    end
+    def request
+      @request ||= Rack::Request.new(@env)
+    end
+
+    def params
+      request.params
     end
 
     def render(view_name, locals = {})
