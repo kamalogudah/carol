@@ -37,4 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rack-test", "~> 0.6.3"
   spec.add_dependency "erubis", "~> 2.7"
   spec.add_dependency "multi_json", "~> 1.11", ">= 1.11.2"
+  spec.add_dependency "sqlite3", "~> 1.3", ">= 1.3.11"
 end
