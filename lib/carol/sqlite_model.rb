@@ -54,6 +54,23 @@ module Carol
         end
         @schema
       end
+
+      def self.find(id)
+        row = DB.execute <<~SQL
+          select #{schema.keys.join ","} from #{table}
+          where id = #{id};
+        SQL
+        data = Hash[schema.keys.zip row[0]]
+        self.new data
+      end
+
+      def [](name)
+        @hash[name.to_s]
+      end
+
+      def []=(name, value)
+        @hash[name.to_s] = value
+      end
     end
   end
 end
